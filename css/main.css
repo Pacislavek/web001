@@ -59,6 +59,7 @@ body {
 
 .desc-primary {
   color: var(--p-color);
+  font-size: 16px;
 }
 
 .desc-secondary {
@@ -281,6 +282,7 @@ section.pricing {
   position: relative;
   display: flex;
   justify-content: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .iphone-container:before {
@@ -301,8 +303,9 @@ section.pricing {
   z-index: 4;
   position: absolute;
   margin: 19% 0 3% 0;
-  width: 71%;
+  width: 72%;
   height: 78%;
+  box-shadow: inset 0 0 1em rgba(0,0,0,0.5);
 }
 
 .iphone {
@@ -314,14 +317,14 @@ section.pricing {
 }
 
 .title-iphone {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: whitesmoke;
 }
 
 .time-iphone {
   text-align: center;
   color: whitesmoke;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 44px;
   font-weight: 300;
   padding: 12px 0;
@@ -347,13 +350,13 @@ section.pricing {
 }
 
 .iphone-popup .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 
 .iphone-popup .desc {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: rgba(0,0,0,0.8);
@@ -433,6 +436,7 @@ section.pricing {
   width: 100%;
   height: 100%;
   background-color: whitesmoke;
+  box-shadow: inset 0 0 1em rgba(0,0,0,0.5);
 }
 
 #offerphone .carousel-item, #offerphone .carousel-inner {
@@ -440,19 +444,78 @@ section.pricing {
 }
 
 .iphone-app .nav-menu {
-  height: 26px;
+  height: 46px;
   width: 100%;
-  background-color: #007bff;
+  background-color: #36a4f7;
+  background: linear-gradient(to top, #2e98e8, #36a4f7);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2px 10px;
-  box-shadow: 0px 1px 4px rgba(0,0,0,0.16);
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.16);
 }
 
 .nav-menu a, .nav-menu span {
   color: white;
+
 }
+
+.nav-menu a {
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+.nav-menu a:focus {
+  transform: scale(0.9);
+}
+
+.app-content {
+  width: 100%;
+  height: 84%;
+  overflow-y: auto;
+}
+
+.app-content::-webkit-scrollbar {
+  width: 0px;
+}
+
+.app-title {
+  font-size: 1.4em;
+  margin-bottom: 0.8rem;
+}
+
+.app-desc {
+  font-size: .95em;
+  text-align: justify;
+}
+
+.app-images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.app-img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.app-button {
+  border: none;
+  outline: none;
+  padding: 7px 12px;
+  float: right;
+  background-color: transparent;
+}
+
+.app-button .fas {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* KONTAKT */
 
 #contact {
   position: relative;
@@ -511,4 +574,26 @@ section.pricing {
 
 .contact-form {
   color: white;
+}
+
+@media (max-width: 575.98px) {
+  .pricing .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 967.98px) {
+  .pricing .card {
+    width: 100%;
+  }
+
+  .phone-section:before {
+  top: 45; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+  .p {
+    font-size: 18px;
+  }
 }
